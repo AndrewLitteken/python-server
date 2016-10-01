@@ -1,0 +1,5 @@
+pysolr==3.5.0
+requests==2.11.1
+urllib3==1.18
+virtualenv==15.0.3
+watson-developer-cloud==0.20.0
