@@ -1,0 +1,92 @@
+{
+  "subject": "module selection",
+  "generate_visualization": false,
+  "columns": [
+    {
+      "key": "completedness",
+      "type": "numeric",
+      "goal": "min",
+      "is_objective": true,
+      "full_name": "Module Completedness",
+      "range": {
+        "low": 0,
+        "high": 100
+      },
+      "format": "number: 2"
+    },
+    {
+      "key": "accFreq",
+      "type": "numeric",
+      "goal": "min",
+      "is_objective": true,
+      "full_name": "Accuracy Frequency",
+      "range": {
+        "low": 0,
+        "high": 100
+      },
+      "format": "number: 2"
+    },
+    {
+      "key": "subject",
+      "type": "categorical",
+      "goal": "min",
+      "is_objective": true,
+      "full_name": "Subject",
+      "range": [
+        "algebra",
+        "curves",
+        "calculus"
+      ],
+      "preference": [
+        "calculus",
+        "algebra",
+        "curves"
+      ]
+    },
+    {
+      "key": "speedAccRatio",
+      "type": "numeric",
+      "goal": "min",
+      "is_objective": true,
+      "full_name": "Speed and Accuracy Ratio",
+       "range": {
+        "low": 0,
+        "high": 100
+      },
+      "format": "number: 2"
+    }
+  ],
+  "options": [
+    {
+      "key": "1",
+      "name": "Algebra Module",
+      "values": {
+        "completedness": 100,
+        "accFreq": 100,
+        "subject": "algebra",
+        "speedAccRatio": 100
+      }
+    },
+    {
+      "key": "2",
+      "name": "Curves Module",
+      "values": {
+        "completedness": 0,
+        "accFreq": 0,
+        "subject": "curves",
+        "speedAccRatio": 0
+      }
+    },
+    {
+      "key": "3",
+      "name": "Calculus Module",
+      "values": {
+        "completedness": 100,
+        "accFreq": 100,
+        "subject": "calculus",
+        "speedAccRatio": 100
+      }
+    }
+  ]
+
+}
