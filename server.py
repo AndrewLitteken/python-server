@@ -2,7 +2,6 @@ import socket
 import sys
 import json
 import os
-import HttpResponse
 from os.path import join, dirname
 from watson_developer_cloud import TradeoffAnalyticsV1
 
