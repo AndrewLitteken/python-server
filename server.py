@@ -1,6 +1,7 @@
 import socket
 import json
 import os
+import HttpResponse
 from os.path import join, dirname
 from watson_developer_cloud import TradeoffAnalyticsV1
 
@@ -33,7 +34,7 @@ while True:
     firstChoice = resolution["resolution"]["solutions"][solutionNum]["solution_ref"]
     index = int(firstChoice)-1
     reccomend = resolution["problem"]["options"][index]["name"]
-    print(reccomend)
+    HttpResponse(reccomend)
 
     http_response = """\
 HTTP/1.1 200 OK
