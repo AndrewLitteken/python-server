@@ -18,9 +18,6 @@ while True:
         request = client_connection.recv(1024)
         print request
 
-    '''with open("userAnalyticsPy.json") as json_file:
-        d = json.load(json_file)
-        print(d)'''
         if request:
             tradeoff_analytics = TradeoffAnalyticsV1(
             username='af7839e5-5719-4357-9f2f-8b4607ba84d5',
