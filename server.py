@@ -4,8 +4,11 @@ import os
 from os.path import join, dirname
 from watson_developer_cloud import TradeoffAnalyticsV1
 
+HOST, PORT = 'https://whispering-castle-67381.herokuapp.com', 5000
+
 listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+listen_socket.bind((HOST, PORT))
 listen_socket.listen(1)
 while True:
     client_connection, client_address = listen_socket.accept()
